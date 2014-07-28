@@ -8,31 +8,32 @@ function setup() {
  
  x=mouseX;
  y=mouseY;
- acc=0.25;
+ acc=0.15;
  yspeed=0.5;
 }
+
 
 function draw() {
   background(255); 
   fill(0);
   x=mouseX;
-  //y=mouseY;
+  y=mouseY;
 if (isMousePressed) {
-   fill(255,0,0);
+   fill(142, 68, 173);
    
- //  x=x+xspeed;
-   y=y+yspeed;
+ 
+   y=y+50*sin(x+yspeed);
    yspeed=yspeed+acc;    
-   if(y<0||y>height)
-   {
-     yspeed=yspeed*-1;
-   }
+  
    
    
-   ellipse(mouseX, y, 40, 40);
+   ellipse(mouseX, y, 18, 18);
 } 
-//else
-//ellipse(mouseX, mouseY, 40, 40);
+
+else
+{ fill(142, 68, 173);
+  ellipse(mouseX,mouseY,18,18); }
+
   
   
 }
